@@ -9,8 +9,24 @@ import {
   FaDownload,
 } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
+import { useState, useEffect } from "react";
+function calculateYearDifference(startDate, endDate = new Date()) {
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+
+  const diffInMs = end - start;
+  const diffInYears = diffInMs / (1000 * 60 * 60 * 24 * 365.25); // Include leap years
+
+  return `${diffInYears.toFixed(1)}`;
+}
 
 const HeroSection = () => {
+  const [yearsPassed, setYearsPassed] = useState(null);
+
+  useEffect(() => {
+    const result = calculateYearDifference("2024-05-15");
+    setYearsPassed(result);
+  }, []);
   const downloadResume = () => {
     const link = document.createElement("a");
     link.href = "./src/assets/Ravisankkaran_Frontend_Developer.pdf"; // 🔁 Replace with actual path
@@ -108,7 +124,7 @@ const HeroSection = () => {
           </p>
         </div>
         <div>
-          <span>1</span>
+          <span>{yearsPassed}</span>
           <p>
             Years of
             <br />
