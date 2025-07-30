@@ -1,0 +1,94 @@
+.skills-section {
+  background-color: #1c1f26;
+  color: #e1e1e1;
+  padding: 60px 40px;
+  text-align: center;
+  font-family: "Fira Code", monospace;
+}
+
+.scroll-indicator {
+  color: #00f7ff;
+  font-size: 24px;
+  animation: bounce 2s infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.skills-icon {
+  font-size: 60px;
+  color: #00f7ff;
+  margin-bottom: 10px;
+}
+
+.skills-title {
+  font-size: 36px;
+  color: #00f7ff;
+  margin: 10px 0;
+}
+
+.skills-subtext {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.skills-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.skill-card {
+  background-color: #a2feff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  color: #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #00f7ff;
+}
+
+.tech-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+.tech-item p {
+  font-weight: bold;
+  font-size: 14px;
+}

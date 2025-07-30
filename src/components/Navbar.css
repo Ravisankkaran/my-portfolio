@@ -1,0 +1,83 @@
+.navbar {
+  background-color: #252b33;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  font-family: monospace;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.logo-icon {
+  color: #00f7e4;
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-center a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-center a.active {
+  color: #00f7e4;
+}
+
+.nav-center a:hover {
+  color: #00f7e4;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding: 6px 30px 6px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.social-icons a svg {
+  color: #00f7e4;
+}
+
+.social-icons a:hover {
+  color: #00f7e4;
+}
