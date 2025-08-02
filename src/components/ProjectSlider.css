@@ -1,83 +1,175 @@
-.slider-container {
-  position: relative;
-  /* background: #0d0f11; */
-  padding: 60px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-arrow {
-  background: #1c1f26;
-  color: white;
-  border: none;
-  /* font-size: 28px; */
-  /* padding: 16px; */
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2;
-  transition: background 0.3s;
-}
-/* .slider-arrow:hover {
-  background: #00f7ff;
-  color: #000;
+/* ===== Base Setup ===== */
+/* :root {
+  --glow: #00f7ff;
+  --card-bg: rgba(17, 24, 39, 0.85);
+  --text-color: #cdeef2;
+  --accent: #38bdf8;
 } */
-.slider-arrow.left {
-  position: absolute;
-  left: 30px;
-}
-.slider-arrow.right {
-  position: absolute;
-  right: 30px;
-}
 
-.slider-content {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  justify-content: center;
-}
+/* body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  color: var(--text-color);
+} */
 
-.screen {
+/* ===== Carousel Container ===== */
+#carousel {
   position: relative;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  overflow: hidden;
-  max-width: 500px;
-}
-.screen img {
   width: 100%;
-  height: auto;
-  display: block;
+  max-width: 1150px;
+  margin: 60px auto;
+  height: 360px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.screen-right {
-  position: relative;
-}
-
-.view-link {
+/* ===== Items ===== */
+.item {
   position: absolute;
-  top: -40px;
-  right: 10px;
-  font-family: "Fira Code", monospace;
-  color: #00f7ff;
-  text-decoration: none;
-  font-size: 20px;
+  top: 30px;
+  width: 220px;
+  height: 300px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 247, 255, 0.2);
+  color: var(--text-color);
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  padding: 15px 10px;
 }
-.view-link:hover {
+
+.item img {
+  width: 90%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.item h4 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+  color: var(--glow);
+}
+
+.item p {
+  font-size: 0.8rem;
+  padding: 0 5px;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+.item a {
+  font-size: 0.75rem;
+  color: var(--glow);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.item a:hover {
   text-decoration: underline;
 }
 
-.cursor {
-  animation: blink 1.1s step-end infinite;
+/* ===== Levels (Depth) ===== */
+.level0 {
+  left: 50%;
+  transform: translateX(-50%) scale(1.1);
+  z-index: 5;
+  opacity: 1;
 }
 
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
+.level1 {
+  left: 25%;
+  transform: translateX(-50%) scale(0.9);
+  z-index: 3;
+  opacity: 0.7;
+}
+
+.level-1 {
+  left: 75%;
+  transform: translateX(-50%) scale(0.9);
+  z-index: 3;
+  opacity: 0.7;
+}
+
+.level2,
+.level-2 {
+  opacity: 0.3;
+  transform: scale(0.7);
+  z-index: 1;
+}
+
+/* ===== Arrows ===== */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: var(--glow);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 14px;
+  border-radius: 50%;
+  border: 1px solid var(--glow);
+  cursor: pointer;
+  transition: 0.3s ease;
+  user-select: none;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: var(--glow);
+  color: #0f172a;
+  box-shadow: 0 0 20px var(--glow);
+}
+
+.arrow-left {
+  left: 15px;
+}
+
+.arrow-right {
+  right: 15px;
+}
+
+/* ===== Animations (for react-transition-group) ===== */
+.left-enter {
+  opacity: 0;
+  transform: translateX(-100%) scale(0.9);
+}
+.left-enter-active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition: all 300ms ease-in;
+}
+
+.right-enter {
+  opacity: 0;
+  transform: translateX(100%) scale(0.9);
+}
+.right-enter-active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition: all 300ms ease-in;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  #carousel {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 10px;
   }
-  50% {
-    opacity: 0;
+
+  .item {
+    position: static;
+    margin-bottom: 30px;
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+
+  .arrow {
+    display: none;
   }
 }

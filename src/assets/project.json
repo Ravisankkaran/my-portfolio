@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Project Alpha",
+      "description": "Exploring the neon-drenched landscapes of a digital frontier.",
+      "link": "https://example.com/project-alpha",
+      "image": "https://picsum.photos/320/200?t=1"
+    },
+    {
+      "name": "Neuro-Link UI",
+      "description": "Designing intuitive interfaces for brain-computer interaction.",
+      "link": "https://example.com/neuro-link",
+      "image": "https://picsum.photos/320/200?t=2"
+    },
+    {
+      "name": "Quantum Entanglement",
+      "description": "Visualizing complex quantum states through advanced rendering.",
+      "link": "https://example.com/quantum",
+      "image": "https://picsum.photos/320/200?t=3"
+    },
+    {
+      "name": "Project Chimera",
+      "description": "Developing next-gen propulsion systems for deep space exploration.",
+      "link": "https://example.com/chimera",
+      "image": "https://picsum.photos/320/200?t=4"
+    },
+    {
+      "name": "Aether Network",
+      "description": "Building a decentralized data network with quantum blockchain.",
+      "link": "https://example.com/aether",
+      "image": "https://picsum.photos/320/200?t=5"
+    }
+  ]
+  
