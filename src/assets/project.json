@@ -1,33 +1,38 @@
 [
-    {
-      "name": "Project Alpha",
-      "description": "Exploring the neon-drenched landscapes of a digital frontier.",
-      "link": "https://example.com/project-alpha",
-      "image": "https://picsum.photos/320/200?t=1"
-    },
-    {
-      "name": "Neuro-Link UI",
-      "description": "Designing intuitive interfaces for brain-computer interaction.",
-      "link": "https://example.com/neuro-link",
-      "image": "https://picsum.photos/320/200?t=2"
-    },
-    {
-      "name": "Quantum Entanglement",
-      "description": "Visualizing complex quantum states through advanced rendering.",
-      "link": "https://example.com/quantum",
-      "image": "https://picsum.photos/320/200?t=3"
-    },
-    {
-      "name": "Project Chimera",
-      "description": "Developing next-gen propulsion systems for deep space exploration.",
-      "link": "https://example.com/chimera",
-      "image": "https://picsum.photos/320/200?t=4"
-    },
-    {
-      "name": "Aether Network",
-      "description": "Building a decentralized data network with quantum blockchain.",
-      "link": "https://example.com/aether",
-      "image": "https://picsum.photos/320/200?t=5"
-    }
-  ]
-  
+  {
+    "name": "Ecommerse- Shop.co",
+    "description": "Designed and developed the frontend of an e-commerce platform using Vue.js and Sass, integrating the Fake Store API to fetch product data and building all key pages to deliver a smooth, user-friendly experience.",
+    "link": "https://web-api-inky.vercel.app",
+    "image": "../src/assets/e-commerse.png"
+  },
+  {
+    "name": "React dashboard",
+    "description": "Developed an interactive React dashboard using Material UI, featuring dynamic charts, responsive layouts, and intuitive navigation for streamlined data visualization and management.",
+    "link": "https://react-dashboard-nine-indol.vercel.app/",
+    "image": "../src/assets/dashboard.png"
+  },
+  {
+    "name": " Business Page",
+    "description": "Created a responsive business landing page using Vue.js and Bootstrap, featuring a clean layout, smooth navigation, and optimized design for seamless user engagement across devices.",
+    "link": "https://business-page-indol.vercel.app/",
+    "image": "../src/assets/business.png"
+  },
+  {
+    "name": "Memory Game",
+    "description": "Built a fun and engaging memory game using Vue.js, featuring dynamic card flipping, match tracking, and responsive design for smooth gameplay across devices.",
+    "link": "https://memory-game-pied-ten.vercel.app/",
+    "image": "../src/assets/memory game.png"
+  },
+  {
+    "name": "Diabetes Risk Prediction",
+    "description": "Developed a machine learning model to predict diabetes risk based on health indicators, leveraging data preprocessing, feature selection, and classification algorithms to deliver accurate and actionable insights.",
+    "link": "#",
+    "image": "../src/assets/Diabetes_Risk_Prediction.png"
+  },
+  {
+    "name": "Drunk Level Classifier",
+    "description": "Developed a Drunk Level Classifier using a Vision Transformer (CvT) and machine learning, converting RGB images to infrared-style visuals to accurately predict sobriety or drunkenness.",
+    "link": "#",
+    "image": "../src/assets/sober.png"
+  }
+]

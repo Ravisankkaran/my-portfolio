@@ -17,8 +17,8 @@
   position: relative;
   width: 100%;
   max-width: 1150px;
-  margin: 60px auto;
-  height: 360px;
+  /* margin: 60px auto; */
+  height: 400px;
   overflow: hidden;
   display: flex;
   justify-content: center;

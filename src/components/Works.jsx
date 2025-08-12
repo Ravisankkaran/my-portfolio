@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "./ProjectSlider.css";
 import projects from "../assets/project.json";
@@ -44,13 +44,19 @@ const Works = () => {
 
   const generateItems = () => {
     const items = [];
+    const nodeRef = useRef(null);
     for (let i = active - 2; i <= active + 2; i++) {
       let index = i;
       if (i < 0) index = projects.length + i;
       if (i >= projects.length) index = i % projects.length;
       const level = active - i;
       items.push(
-        <CSSTransition key={index} classNames={direction} timeout={300}>
+        <CSSTransition
+          key={index}
+          classNames={direction}
+          timeout={300}
+          nodeRef={nodeRef}
+        >
           <Item project={projects[index]} level={level} />
         </CSSTransition>
       );
