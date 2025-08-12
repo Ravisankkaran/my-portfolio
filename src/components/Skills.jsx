@@ -6,13 +6,21 @@ import cssLogo from "../assets/css.png";
 import jsLogo from "../assets/js.png";
 import reactLogo from "../assets/atom.png";
 import vueLogo from "../assets/vue.png";
-
+import Tooltip from "@mui/material/Tooltip";
 const Skills = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // Optional: for smooth scrolling animation
+    });
+  };
   return (
     <section className="skills-section">
       {/* <div className="scroll-indicator">⬤</div> */}
-      <div className="mouse-icon"></div>
-
+      <Tooltip title="Move to Top">
+        <div className="mouse-icon" onClick={scrollToTop}></div>
+      </Tooltip>
       <div className="skills-icon">&lt;/&gt;</div>
 
       <h2 className="skills-title">Skills</h2>

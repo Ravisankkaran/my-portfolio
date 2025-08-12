@@ -1,3 +1,25 @@
 body {
   background-color: #252b33;
 }
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  color: #00f7ff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #00f7ff;
+  color: azure;
+}

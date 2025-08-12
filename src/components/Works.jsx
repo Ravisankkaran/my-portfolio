@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "./ProjectSlider.css";
 import projects from "../assets/project.json";
-
+import Tooltip from "@mui/material/Tooltip";
 const Item = ({ project, level }) => {
   const className = `item level${level}`;
   return (
@@ -63,11 +63,18 @@ const Works = () => {
     }
     return items;
   };
-
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // Optional: for smooth scrolling animation
+    });
+  };
   return (
     <section className="skills-section">
-      <div className="mouse-icon"></div>
-
+      <Tooltip title="Move to Top">
+        <div className="mouse-icon" onClick={scrollToTop}></div>
+      </Tooltip>
       <h2 className="skills-title">My Works</h2>
       <div id="carousel" className="noselect">
         <div className="arrow arrow-left" onClick={moveLeft}>

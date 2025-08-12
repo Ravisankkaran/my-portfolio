@@ -1,13 +1,21 @@
 import React from "react";
 import "./AboutMe.css"; // Don't forget to create this file
 import aboutImg from "../assets/about-img.png"; // replace with your actual image path
-
+import Tooltip from "@mui/material/Tooltip";
 const AboutMe = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // Optional: for smooth scrolling animation
+    });
+  };
   return (
     <section className="about-container">
       {/* <div className="scroll-indicator">⬤</div> */}
-      <div className="mouse-icon"></div>
-
+      <Tooltip title="Move to Top">
+        <div className="mouse-icon" onClick={scrollToTop}></div>
+      </Tooltip>
       <div className="about-heading">
         <h2>About Me</h2>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ContactPage.css";
 import github from "../assets/github.png";
+import Tooltip from '@mui/material/Tooltip';
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -19,10 +20,19 @@ const ContactPage = () => {
     alert("Message sent!");
     setFormData({ name: "", email: "", message: "" });
   };
-
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // Optional: for smooth scrolling animation
+    });
+  };
   return (
     <section className="contact-section">
-      <div className="mouse-icon"></div>
+            <Tooltip title="Move to Top">
+      
+      <div className="mouse-icon" onClick={scrollToTop}></div>
+      </Tooltip>
       <h2 className="contact-title">Contact</h2>
       <p className="contact-subtitle">
         I’m currently available for freelance work

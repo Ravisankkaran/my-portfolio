@@ -18,6 +18,7 @@ body {
   border-radius: 10px;
   margin: 0 auto 20px;
   position: relative;
+  cursor: pointer;
 }
 .mouse-icon::after {
   content: "";
